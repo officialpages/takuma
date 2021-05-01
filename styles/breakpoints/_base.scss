@@ -1,0 +1,402 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.py-lg {
+	padding: 80px 0;
+}
+.content-width {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1070px;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		padding: 0;
+		margin: 0;
+	}
+}
+
+body {
+	font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "メイリオ", Meiryo,
+		sans-serif;
+}
+
+#global-container {
+	position: relative;
+}
+
+#container {
+	position: relative;
+	//z-index: 1;
+}
+
+.header {
+	z-index: 100;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $headerHeight;
+	background-color: $cHeader;
+	&__inner {
+		width: calc(100% - 20px);
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__logo {
+		line-height: $headerHeight;
+		a {
+			display: block;
+			color: #333;
+		}
+	}
+	&__menu-list {
+		display: none;
+	}
+	// メニュー下降時
+	&.torigger {
+		transition: opacity 1s ease-in-out;
+		opacity: 1;
+	}
+}
+
+.hero {
+	height: 100vh;
+	background-color: $bgc;
+	border: none;
+	&__inner {
+		@extend .py-lg;
+	}
+	&__image {
+		& > img {
+			object-fit: cover;
+			width: 75%;
+		}
+	}
+	&__main {
+		position: relative;
+	}
+	&__heding {
+		& h1 {
+			position: absolute;
+			bottom: -100px;
+			right: 0;
+			text-align: end;
+			& span {
+				font-weight: normal;
+				letter-spacing: 2px;
+				display: table;
+				font-size: 50px;
+				line-height: 50px;
+				margin-bottom: 20px;
+				margin-right: 10px;
+				padding: 0 15px;
+				background-color: #fff;
+				color: $hcolor;
+			}
+		}
+	}
+	&__official {
+		font-size: 30px;
+		color: #fff;
+		margin: 130px auto;
+		text-align: center;
+		text-decoration: underline;
+	}
+}
+
+.career {
+	&__inner {
+		@extend .py-lg;
+		background-color: $bgc;
+	}
+	&__image {
+		text-align: right;
+		& > h2 {
+			color: $hcolor;
+			font-size: 40px;
+			margin-right: 20px;
+		}
+		& .cover-slide {
+			width: 70%;
+			margin: 0 0 0 auto;
+			position: relative;
+			img {
+				object-fit: cover;
+				width: 100%;
+			}
+			&::after {
+				content: "";
+				z-index: 2;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: rgba(255, 255, 255, 0.7);
+			}
+		}
+	}
+	&__list {
+		color: #fff;
+		width: 80%;
+		margin: 50px auto;
+		font-size: 18px;
+		margin-bottom: 0;
+		line-height: 30px;
+	}
+}
+
+.topics {
+	&__inner {
+		background-color: $bgc;
+		@extend .py-lg;
+	}
+	&__heding {
+		color: $hcolor;
+		text-align: center;
+		font-size: 30px;
+	}
+	&__item {
+		margin: 40px auto;
+	}
+	&__image-wrapper {
+		position: relative;
+		img {
+			object-fit: cover;
+			//object-position: 0 -1px;
+			width: 100%;
+			height: 200px;
+		}
+		h4 {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			color: #fff;
+			font-size: 25px;
+			span {
+				display: table;
+				&:nth-child(1) {
+					margin-right: 20px;
+				}
+				&:nth-child(2) {
+					margin-left: 25px;
+				}
+			}
+		}
+		&::after {
+			position: absolute;
+			right: 0;
+			bottom: -200px;
+			left: -180px;
+			//right: 0;
+			width: 0px;
+			height: 0px;
+			margin: auto;
+			content: "";
+			border-style: solid;
+			border-color: $ctraiangle transparent transparent transparent;
+			border-width: 200px 200px 200px 0;
+		}
+	}
+	&__view {
+		position: relative;
+		margin-right: 40px;
+		margin-top: 40px;
+		text-align: right;
+		& > p {
+			color: white;
+			font-size: 20px;
+			&::before {
+				position: absolute;
+				top: 15px;
+				right: 110px;
+				content: "";
+				width: 60px;
+				height: 1px;
+				background-color: #fff;
+				//display: block;
+			}
+		}
+	}
+}
+
+.others {
+	background-color: $bgc;
+	&__inner {
+		@extend .py-lg;
+		@extend .content-width;
+	}
+	&__heding {
+		color: $hcolor;
+		font-size: 25px;
+	}
+	&__images {
+		margin: 0 auto;
+	}
+	&__row {
+		text-align: center;
+		& > img {
+			object-fit: cover;
+			margin-bottom: 20px;
+		}
+		&.row1,
+		&.row3 {
+			& > img {
+				width: 100%;
+			}
+		}
+		&.row2 {
+			display: flex;
+			justify-content: space-between;
+			& > img {
+				width: 40%;
+				flex-basis: 48%;
+			}
+		}
+	}
+}
+
+.footer {
+	padding: 10px;
+	p {
+		text-align: center;
+	}
+}
+
+/* model.html */
+
+.model_top {
+	background-color: $bgc;
+	&__inner {
+		@extend .py-lg;
+	}
+	&__heding {
+		text-align: center;
+		h2 {
+			margin-top: 50px;
+			margin-bottom: 30px;
+			color: $hcolor;
+			font-size: 40px;
+		}
+		p {
+			color: #fff;
+			font-size: 17px;
+		}
+	}
+	&__image {
+		margin: 50px 0;
+		img {
+			object-fit: cover;
+			width: 60%;
+		}
+		&.right {
+			text-align: right;
+		}
+	}
+}
+
+.section {
+	background-color: $bgc;
+	&__inner {
+		@extend .py-lg;
+		@extend .content-width;
+	}
+	&__heding {
+		color: $hcolor;
+		font-size: 25px;
+	}
+	p {
+		color: #fff;
+	}
+	&__content {
+		margin: 40px auto;
+		font-size: 20px;
+	}
+	&__text {
+		line-height: 30px;
+	}
+	&.right {
+		.section__inner {
+			padding-top: 0;
+		}
+		.section__heding {
+			text-align: right;
+		}
+		.section__text {
+			line-height: 20px;
+		}
+	}
+}
+
+.customer {
+	background-color: $bgc;
+	&__inner {
+		@extend .py-lg;
+		@extend .content-width;
+	}
+	&__heding {
+		color: $hcolor;
+		font-size: 25px;
+		text-align: center;
+	}
+	&__text {
+		text-align: center;
+		color: #fff;
+		margin-top: 40px;
+		font-size: 20px;
+	}
+	&__btn {
+		a {
+			position: relative;
+			color: #31d300;
+			display: block;
+			background: #fff;
+			width: 150px;
+			text-align: center;
+			margin: 50px auto;
+			height: 45px;
+			line-height: 45px;
+			font-size: 20px;
+			overflow: hidden;
+
+			&::before {
+				content: "";
+				display: inline-block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: #31d300;
+				transform: translateX(-100%);
+				z-index: -1;
+				transition: transform 1s;
+			}
+
+			&:hover {
+				&::before {
+					transform: none;
+				}
+			}
+		}
+	}
+}
