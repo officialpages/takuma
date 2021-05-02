@@ -503,6 +503,7 @@ body {
 
 .others__row.row2 > img {
   width: 40%;
+  height: 250px;
   -ms-flex-preferred-size: 48%;
       flex-basis: 48%;
 }
