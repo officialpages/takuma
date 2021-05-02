@@ -16,11 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const io = new IntersectionObserver(cb);
   io.observe(el);
 
-  const slide_el = document.querySelector('.cover-slide');
-  if (slide_el != null) {
-    const slide_io = new IntersectionObserver(slide_cb);
-    slide_io.observe(slide_el);
-  }
   const slide_cb = function(entries, observer) {
     entries.forEach(entry => {
       if(entry.isIntersecting) {
@@ -28,5 +23,11 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.unobserve(entry.target);
       }
     })
+  }
+
+  const slide_el = document.querySelector('.cover-slide');
+  if (slide_el != null) {
+    const slide_io = new IntersectionObserver(slide_cb);
+    slide_io.observe(slide_el);
   }
 });
