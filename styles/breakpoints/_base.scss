@@ -6,7 +6,9 @@ h5,
 h6 {
 	font-weight: normal;
 }
-
+a {
+	color: #fff;
+}
 a:hover {
 	text-decoration: none;
 }
@@ -33,6 +35,10 @@ ul {
 body {
 	font-family: "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "メイリオ", Meiryo,
 		sans-serif;
+}
+
+.mobile-none {
+	display: none;
 }
 
 #global-container {
@@ -96,6 +102,7 @@ body {
 	}
 	&__heding {
 		& h1 {
+			z-index: 20;
 			position: absolute;
 			bottom: -100px;
 			right: 0;
@@ -124,9 +131,9 @@ body {
 }
 
 .career {
+	background-color: $bgc;
 	&__inner {
 		@extend .py-lg;
-		background-color: $bgc;
 	}
 	&__image {
 		text-align: right;
@@ -166,8 +173,8 @@ body {
 }
 
 .topics {
+	background-color: $bgc;
 	&__inner {
-		background-color: $bgc;
 		@extend .py-lg;
 	}
 	&__heding {
@@ -177,14 +184,30 @@ body {
 	}
 	&__item {
 		margin: 40px auto;
+		// hoverアニメーション。
+		& a:hover {
+			.topics__view {
+				opacity: 1;
+				p::before {
+					width: 120px;
+				}
+			}
+			.topics__image-wrapper {
+				img {
+					transform: scale(1.2);
+				}
+			}
+		}
 	}
 	&__image-wrapper {
 		position: relative;
+		overflow: hidden;
 		img {
 			object-fit: cover;
-			//object-position: 0 -1px;
 			width: 100%;
 			height: 200px;
+			//aタグhover時
+			transition: transform 0.5s;
 		}
 		h4 {
 			position: absolute;
@@ -206,11 +229,9 @@ body {
 			position: absolute;
 			right: 0;
 			bottom: -200px;
-			left: -180px;
-			//right: 0;
+			left: 0;
 			width: 0px;
 			height: 0px;
-			margin: auto;
 			content: "";
 			border-style: solid;
 			border-color: $ctraiangle transparent transparent transparent;
@@ -218,6 +239,9 @@ body {
 		}
 	}
 	&__view {
+		opacity: 0.6;
+		//aタグhover時
+		transition: opacity 0.5s;
 		position: relative;
 		margin-right: 40px;
 		margin-top: 40px;
@@ -233,7 +257,8 @@ body {
 				width: 60px;
 				height: 1px;
 				background-color: #fff;
-				//display: block;
+				//aタグhover時
+				transition: width 1s;
 			}
 		}
 	}

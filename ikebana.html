@@ -10,6 +10,7 @@
   <!-- google font -->
   <!-- font awesome -->
   <!-- swiper-min.css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/style.css">
   <title>Document</title>
 </head>
@@ -22,12 +23,15 @@
       <header class="header">
         <div class="header__inner">
           <div class="header__logo">
-            <a href="index.html">テスト</a>
+            <a href="index.html">Takuma Official</a>
           </div>
-          <div class="header__menu-list">
-
+          <div class="header__menu mobile-none">
+            <ul>
+              <li><a href="model.html">Model</a></li>
+              <li><a href="ikebana.html">Ikebana</a></li>
+            </ul>
           </div>
-          <div class="mobile-menu__btn">
+          <div class="mobile-menu__btn desctop-none">
             <span></span>
             <span></span>
             <span></span>
@@ -47,11 +51,20 @@
                     日本のクールな文化の１つある<br>
                     生花の魅力を伝えていきます。</p>
                 </div>
-                <div class="model_top__image left">
+                <div class="model_top__image left desctop-none ">
                   <img src="images/takuma21.jpg" alt="">
                 </div>
-                <div class="model_top__image right">
+                <div class="model_top__image right desctop-none">
                   <img src="images/takuma18.jpg" alt="">
+                </div>
+                <div class="subhero-swiper mobile-none">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/takuma21.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/takuma13.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/takuma16.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/takuma17.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="images/takuma26.jpg" alt=""></div>
+                  </div>
                 </div>
               </div>
             </section>
@@ -116,10 +129,30 @@
       </footer>
     </div>
     <div class="mobile-menu">
-      mobile-menuです。
+      <div class="mobile-menu__inner">
+        <div class="mobile-menu__heding">
+          <h2>Topics<span></span></h2>
+        </div>
+        <div class="mobile-menu__list desctop-none">
+          <ul>
+            <li><a href="model.html">Model</a></li>
+            <li><a href="ikebana.html">Ikebana</a></li>
+          </ul>
+        </div>
+        <div class="mobile-menu__heding">
+          <h2>SNS<span></span></h2>
+        </div>
+        <div class="mobile-menu__list desctop-none">
+          <ul>
+            <li><a href="https://www.instagram.com/taku_sailing/">Instagram</a></li>
+            <li><a href="https://m.youtube.com/channel/UC5xnHM4iJIZSHpRstnQI4zA">Youtube</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
   </div>
   <!-- JavaScript -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="scripts/libs/mobile-menu.js"></script>
   <script src="scripts/main.js"></script>
 </body>

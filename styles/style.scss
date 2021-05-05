@@ -3,7 +3,7 @@
 @import "modules/image-slide";
 @import "breakpoints/base";
 @import "modules/mobile-menu";
-
+@import "modules/swiper";
 @media (min-width: 480px) {
 	@import "breakpoints/480up";
 }

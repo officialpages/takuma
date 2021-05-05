@@ -10,6 +10,7 @@
   <!-- google font -->
   <!-- font awesome -->
   <!-- swiper-min.css -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="styles/style.css">
   <title>Document</title>
 </head>
@@ -21,12 +22,15 @@
       <header class="header">
         <div class="header__inner">
           <div class="header__logo">
-            <a href="index.html">テスト</a>
+            <a href="index.html">Takuma Official</a>
           </div>
-          <div class="header__menu-list">
-
+          <div class="header__menu mobile-none">
+            <ul>
+              <li><a href="model.html">Model</a></li>
+              <li><a href="ikebana.html">Ikebana</a></li>
+            </ul>
           </div>
-          <div class="mobile-menu__btn">
+          <div class="mobile-menu__btn desctop-none">
             <span></span>
             <span></span>
             <span></span>
@@ -37,8 +41,27 @@
         <div class="hero">
           <div class="hero__inner">
             <div class="hero__main">
-              <div class="hero__image">
+              <div class="hero__image desctop-none">
                 <img src="images/takuma3.jpg" alt="">
+              </div>
+              <div class="hero__side mobile-none">
+                <a href="model.html">
+                  <p>model<span></span></p>
+                </a>
+                <a href="ikebana.html">
+                  <p>ikebana<span></span></p>
+                </a>
+              </div>
+              <div class="hero__desctop__images mobile-none">
+                <div class="cover-slide hero__cover">
+                  <img class="img-zoom" src="images/takuma3.jpg" alt="">
+                </div>
+                <div class="cover-slide hero__cover">
+                  <img class="img-zoom" src="images/takuma6.jpg" alt="">
+                </div>
+                <div class="cover-slide hero__cover">
+                  <img class="img-zoom" src="images/takuma16.jpg" alt="">
+                </div>
               </div>
               <div class="hero__heding">
                 <h1>
@@ -78,7 +101,7 @@
               <div class="topics__inner">
                 <div class="topics__heding">
                   <h2>
-                    Topicks
+                    Topics
                   </h2>
                 </div>
                 <div class="topics__wrapper">
@@ -112,27 +135,72 @@
                   </div>
                 </div>
               </div>
+            </section>
+            <section class="others">
+              <div class="others__inner">
+                <div class="others__heding">
+                  <h2>Other Fhotos</h2>
+                </div>
+                <div class="others__images desctop-none">
+                  <div class="others__row row1">
+                    <img src="images/takuma8.jpg" alt="">
+                  </div>
+                  <div class="others__row row2">
+                    <img src="images/takuma9.jpg" alt="">
+                    <img src="images/takuma2.jpg" alt="">
+                  </div>
+                  <div class="others__row row3">
+                    <img src="images/takuma10.jpg" alt="">
+                  </div>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper-container first-swiper mobile-none">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img src="images/takuma8.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma25.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma23.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper-container second-swiper mobile-none">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                      <img src="images/takuma8.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma2.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma1.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma25.jpg" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="images/takuma23.jpg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
         </div>
-        </section>
-        <section class="others">
-          <div class="others__inner">
-            <div class="others__heding">
-              <h2>Other Fhotos</h2>
-            </div>
-            <div class="others__images">
-              <div class="others__row row1">
-                <img src="images/takuma8.jpg" alt="">
-              </div>
-              <div class="others__row row2">
-                <img src="images/takuma9.jpg" alt="">
-                <img src="images/takuma2.jpg" alt="">
-              </div>
-              <div class="others__row row3">
-                <img src="images/takuma10.jpg" alt="">
-              </div>
-            </div>
-          </div>
-        </section>
+
         </main>
         <!-- <aside></aside> -->
       </div>
@@ -142,10 +210,30 @@
     </footer>
   </div>
   <div class="mobile-menu">
-    mobile-menuです。
+    <div class="mobile-menu__inner">
+      <div class="mobile-menu__heding">
+        <h2>Topics<span></span></h2>
+      </div>
+      <div class="mobile-menu__list desctop-none">
+        <ul>
+          <li><a href="model.html">Model</a></li>
+          <li><a href="ikebana.html">Ikebana</a></li>
+        </ul>
+      </div>
+      <div class="mobile-menu__heding">
+        <h2>SNS<span></span></h2>
+      </div>
+      <div class="mobile-menu__list desctop-none">
+        <ul>
+          <li><a href="https://www.instagram.com/taku_sailing/">Instagram</a></li>
+          <li><a href="https://m.youtube.com/channel/UC5xnHM4iJIZSHpRstnQI4zA">Youtube</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
   </div>
   <!-- JavaScript -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="scripts/libs/mobile-menu.js"></script>
   <script src="scripts/main.js"></script>
 </body>
